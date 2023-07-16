@@ -29,7 +29,8 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            CountCreatures();  // replace with your method
+            CountCreatures();
+            CheckForVictory();
             yield return new WaitForSeconds(4);
         }
     }
@@ -39,7 +40,6 @@ public class GameManager : MonoBehaviour
         rockCount = FindObjectsOfType<Rock>().Length;
         scissorsCount = FindObjectsOfType<Scissors>().Length;
         paperCount = FindObjectsOfType<Paper>().Length;
-        CheckForVictory();
     }
 
     private void CheckForVictory()

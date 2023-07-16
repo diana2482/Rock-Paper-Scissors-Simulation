@@ -11,7 +11,6 @@ public class MobSpawner : MonoBehaviour
     public List<GameObject> creatures;
     void Start()
     {
-        
         mobCount = PlayerPrefs.GetInt("CreatureCount", 1);
         GameManager.instance.rockCount = mobCount;
         GameManager.instance.paperCount = mobCount;
